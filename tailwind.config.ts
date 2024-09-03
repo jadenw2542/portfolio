@@ -18,8 +18,9 @@ const config = {
       },
     },
     extend: {
-      colors: {
-        
+      spacing: {
+        '42.5': '10.75rem', // Custom rem padding value
+        '18': '4.5rem', // Custom rem padding value
       },
       keyframes: {
         "accordion-down": {

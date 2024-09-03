@@ -1,7 +1,7 @@
 
 export default function About(){
     return (
-        <div id="about" className="h-screen text-background scroll-mt-16 
+        <div id="about" className="h-screen text-background scroll-mt-18 
         sm:scroll-mt-4">
             <h1 className="font-bold text-m sm:text-xl"> About Me</h1>
             Leo pede primis senectus lacinia lorem porta nonummy amet. Condimentum placerat vehicula pharetra cursus vestibulum 
