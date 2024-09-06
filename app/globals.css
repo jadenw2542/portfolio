@@ -75,7 +75,7 @@
     .text-popover-foreground {
         color: hsl(var(--popover-foreground));
     }
-    /* primary interactive elements' text color.*/
+    /*BUTTON Text-rimary interactive elements' text color.*/ 
     .text-primary-foreground {
         color: hsl(var(--primary-foreground));
     }

@@ -14,13 +14,26 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        // '2xl': {'max': '1535px'}, // => @media (max-width: 1535px) { ... }
+        // 'xl': {'max': '1279px'}, // => @media (max-width: 1279px) { ... }
+        // 'lg': {'max': '1023px'}, // => @media (max-width: 1023px) { ... }
+        // 'md': {'max': '767px'}, // => @media (max-width: 767px) { ... }
+        'lg-pc': {'min': '2000px'},
+        'mobile': {'max': '639px'}, // => @media (max-width: 639px) { ... }
       },
     },
     extend: {
+      screens: {
+        'lg-pc': {'min': '2000px'}, 
+        'mobile': {'max': '639px'}, 
+
+      },
       spacing: {
         '42.5': '10.75rem', // Custom rem padding value
-        '18': '4.5rem', // Custom rem padding value
+        '18': '4.5rem', // Custom rem padding 
+        '108' : '28rem',
+        '112' : '32rem',
+        '120' : '36rem'
       },
       keyframes: {
         "accordion-down": {
