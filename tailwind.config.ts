@@ -19,12 +19,17 @@ const config = {
         // 'lg': {'max': '1023px'}, // => @media (max-width: 1023px) { ... }
         // 'md': {'max': '767px'}, // => @media (max-width: 767px) { ... }
         'lg-pc': {'min': '2000px'},
+        'pc': {'min': '640px'},
         'mobile': {'max': '639px'}, // => @media (max-width: 639px) { ... }
       },
     },
     extend: {
+      fontFamily: {
+        'opensans': ['"Open Sans"', 'sans-serif'], // Add Open Sans
+      },
       screens: {
         'lg-pc': {'min': '2000px'}, 
+        'pc': {'min': '640px'}, 
         'mobile': {'max': '639px'}, 
 
       },

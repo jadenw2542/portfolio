@@ -3,7 +3,8 @@ export default function About(){
     return (
         <div id="about" className="scroll-mt-4 pb-16
         text-lg text-foreground
-        mobile:scroll-mt-20" 
+        lg-pc:scroll-mt-8 lg-pc:text-3xl
+        mobile:scroll-mt-20 mobile:pb-10" 
         >   
             <h1 className="text-6xl pb-5
             lg-pc:text-8xl
@@ -12,7 +13,8 @@ export default function About(){
                 <br/>
                 My name is Jaden Wong - software engineer based in NYC
             </h1>
-            <h1 className="font-bold text-3xl"> About Me</h1>
+            <h1 className="font-bold text-3xl
+            lg-pc:text-5xl lg-pc:pb-8"> About Me</h1>
             <p>
                 Welcome to my portfolio! My name is <strong className="">Jaden Wong</strong>.
                 I am a <strong className="">software engineer </strong> based in NYC with a passion in full stack development and software engineering.    

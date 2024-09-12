@@ -12,7 +12,9 @@
     --popover-foreground: 276 100% 10%;
     --primary: 276 45% 27%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 276 30% 70%;
+    --secondary: 276 30% 70%; 
+    /* opacity */
+    --secondary-opacity: 276 30% 80%; 
     --secondary-foreground: 0 0% 0%;
     --muted: 238 30% 85%;
     --muted-foreground: 276 5% 35%;
@@ -35,6 +37,8 @@
     --primary: 276 45% 27%;
     --primary-foreground: 0 0% 100%;
     --secondary: 276 30% 20%;
+    /* opacity */   
+    --secondary-opacity: 276 30% 80%; 
     --secondary-foreground: 0 0% 100%;
     --muted: 238 30% 25%;
     --muted-foreground: 276 5% 60%;
@@ -114,6 +118,9 @@
     }
     .bg-secondary {
         background-color: hsl(var(--secondary));
+    }
+    .bg-secondary-opacity{
+        background-color: hsl(var(--secondary-opacity));
     }
     .bg-muted {
         background-color: hsl(var(--muted));
