@@ -21,15 +21,15 @@ export async function POST(request: Request) {
     const { name, email, message } = ContactFormSchema.parse(body);
 
     // Send email via Resend
-    await resend.emails.send({
+    console.log(await resend.emails.send({
       from: `${email}`,
-      to: ['jwong2542@gmail.com'], // This can be your portfolio email
+      to: 'jwong2542@gmail.com', // This can be your portfolio email
       subject: `New message from ${name}`,
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Message:</strong> ${message}</p>`,
       
-    });
+    }));
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
