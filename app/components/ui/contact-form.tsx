@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -12,8 +13,6 @@ export default function ContactForm() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [recaptchaToken, setRecaptchaToken] = useState<string>('');
-
-  const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
