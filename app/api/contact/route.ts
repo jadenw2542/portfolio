@@ -41,7 +41,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid Recaptcha' }, { status: 400 });
     }
 
-    console.log('captcha success');
+    console.log('captcha success!');
 
     // Send email via Resend
     console.log(
