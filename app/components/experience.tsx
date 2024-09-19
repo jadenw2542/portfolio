@@ -34,7 +34,7 @@ export default function Experience() {
                         <time className="mb-1 text-sm font-normal leading-none text-muted-foreground lg-pc:text-2xl">Jul 2023 - Aug 2023</time>
                         <h3 className="text-lg font-semibold lg-pc:text-3xl">Special Initiatives Unit Intern @NYC Department for the Aging</h3>
                         <p className="mb-4 text-muted-foreground font-normal ">
-                        At the NYC Department for Aging, I used Python and data visualization tools to analyze the distribution of farmers' market coupons, providing strategic insights for targeted outreach to essential services for underserved senior populations. This experience highlighted the importance of data-driven decision-making in public service and sharpened my ability to translate complex data into actionable insights.
+                        At the NYC Department for Aging, I used Python and data visualization tools to analyze the distribution of farmers&apos; market coupons, providing strategic insights for targeted outreach to essential services for underserved senior populations. This experience highlighted the importance of data-driven decision-making in public service and sharpened my ability to translate complex data into actionable insights.
                         </p>
                     </li>
                     <li className="ms-4">
@@ -42,7 +42,7 @@ export default function Experience() {
                         <time className="mb-1 text-sm font-normal leading-none text-muted-foreground lg-pc:text-2xl">Jun 2022 - Aug 2022</time>
                         <h3 className="text-lg font-semibold lg-pc:text-3xl">Network Operations Intern @Spotify</h3>
                         <p className="mb-4 text-muted-foreground font-normal ">
-                        At Spotify, I migrated and renewed documentation, streamlining troubleshooting processes for the company's global IT infrastructure. This role enhanced my understanding of the operational challenges faced by large-scale technology companies and highlights the significance of maintaining robust, and secure IT systems.
+                        At Spotify, I migrated and renewed documentation, streamlining troubleshooting processes for the company&apos;s global IT infrastructure. This role enhanced my understanding of the operational challenges faced by large-scale technology companies and highlights the significance of maintaining robust, and secure IT systems.
                         </p>
                     </li>
                 </ol>
