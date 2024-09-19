@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.recaptcha-container {
+  width: 100%; /* Ensures the CAPTCHA scales with the parent container */
+  display: flex;
+  justify-content: center; /* Centers the CAPTCHA */
+}
+
+@media (max-width: 640px) {
+  .recaptcha-container {
+    transform: scale(0.85); /* Scales down the CAPTCHA on smaller screens */
+  }
+}
+
 @layer base {
   :root {
     --background: 276 100% 95%;

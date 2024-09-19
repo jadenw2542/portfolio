@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
@@ -13,6 +13,8 @@ export default function ContactForm() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [recaptchaToken, setRecaptchaToken] = useState<string>('');
+
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,6 +41,11 @@ export default function ContactForm() {
       setName('');
       setEmail('');
       setMessage('');
+
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset(); // Reset the CAPTCHA
+      }
+      setRecaptchaToken('');
     } else {
       setError(result.error || 'Something went wrong.');
     }
@@ -81,10 +88,13 @@ export default function ContactForm() {
             required
             className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 lg-pc:h-40 lg-pc:rounded-2xl lg-pc:text-2xl"
           ></textarea>
-          <ReCAPTCHA
-            sitekey={RECAPTCHA_SITE_KEY}
-            onChange={handleRecaptchaChange}
-          />
+          <div className="recaptcha-container">
+            <ReCAPTCHA
+              sitekey={RECAPTCHA_SITE_KEY}
+              onChange={handleRecaptchaChange}
+              ref={recaptchaRef}
+            />
+          </div>
           <button
             type="submit"
             disabled={loading}
