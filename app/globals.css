@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;    
+@tailwind utilities;
 
 @layer base {
-    :root {
+  :root {
     --background: 276 100% 95%;
     --foreground: 276 5% 10%;
     --card: 276 50% 90%;
@@ -12,9 +12,9 @@
     --popover-foreground: 276 100% 10%;
     --primary: 276 45% 27%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 276 30% 70%; 
+    --secondary: 276 30% 70%;
     /* opacity */
-    --secondary-opacity: 276 30% 80%; 
+    --secondary-opacity: 276 30% 80%;
     --secondary-foreground: 0 0% 0%;
     --muted: 238 30% 85%;
     --muted-foreground: 276 5% 35%;
@@ -26,8 +26,8 @@
     --input: 276 30% 26%;
     --ring: 276 45% 27%;
     --radius: 0.5rem;
-    }
-    .dark  {
+  }
+  .dark {
     --background: 276 50% 10%;
     --foreground: 276 5% 90%;
     --card: 276 50% 10%;
@@ -37,8 +37,8 @@
     --primary: 276 45% 27%;
     --primary-foreground: 0 0% 100%;
     --secondary: 276 30% 20%;
-    /* opacity */   
-    --secondary-opacity: 276 30% 80%; 
+    /* opacity */
+    --secondary-opacity: 276 30% 80%;
     --secondary-foreground: 0 0% 100%;
     --muted: 238 30% 25%;
     --muted-foreground: 276 5% 60%;
@@ -50,102 +50,100 @@
     --input: 276 30% 26%;
     --ring: 276 45% 27%;
     --radius: 0.5rem;
-    }
+  }
 }
 
 @layer utilities {
-    /* Background colors */
-    .bg-background {
-        background-color: hsl(var(--background));
-    }
-    .bg-card {
-        background-color: hsl(var(--card));
-    }
-    .bg-popover {
-        background-color: hsl(var(--popover));
-    }
+  /* Background colors */
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+  .bg-popover {
+    background-color: hsl(var(--popover));
+  }
 
-    /* Text colors */
+  /* Text colors */
 
-    /* primary text color used for most of your body text and general content. */
-    .text-foreground {
-        color: hsl(var(--foreground));
-    }
-    /* intended for text within card components.*/
-    .text-card-foreground {
-        color: hsl(var(--card-foreground));
-    }
-    /* text in popover elements, such as tooltips, dropdowns, or modal titles.*/
-    .text-popover-foreground {
-        color: hsl(var(--popover-foreground));
-    }
-    /*BUTTON Text-rimary interactive elements' text color.*/ 
-    .text-primary-foreground {
-        color: hsl(var(--primary-foreground));
-    }
-    /* secondary text elements that are less prominent than primary elements but still important.*/
-    .text-secondary-foreground {
-        color: hsl(var(--secondary-foreground));
-    }
-    /* muted or subdued text, often used for secondary or less important content.*/
-    .text-muted-foreground {
-        color: hsl(var(--muted-foreground));
-    }
-    /* elements that you want to highlight or give emphasis to, without using the primary color.*/
-    .text-accent-foreground {
-        color: hsl(var(--accent-foreground));
-    }
-    /* text in destructive actions or warnings.*/
-    .text-destructive-foreground { 
-        color: hsl(var(--destructive-foreground));
-    }
-    /* general-purpose destructive text color, typically used for titles or larger sections of text associated with destructive actions.*/
-    .text-destructive {
-        color: hsl(var(--destructive));
-    }
+  /* primary text color used for most of your body text and general content. */
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+  /* intended for text within card components.*/
+  .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+  /* text in popover elements, such as tooltips, dropdowns, or modal titles.*/
+  .text-popover-foreground {
+    color: hsl(var(--popover-foreground));
+  }
+  /*BUTTON Text-rimary interactive elements' text color.*/
+  .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+  }
+  /* secondary text elements that are less prominent than primary elements but still important.*/
+  .text-secondary-foreground {
+    color: hsl(var(--secondary-foreground));
+  }
+  /* muted or subdued text, often used for secondary or less important content.*/
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+  /* elements that you want to highlight or give emphasis to, without using the primary color.*/
+  .text-accent-foreground {
+    color: hsl(var(--accent-foreground));
+  }
+  /* text in destructive actions or warnings.*/
+  .text-destructive-foreground {
+    color: hsl(var(--destructive-foreground));
+  }
+  /* general-purpose destructive text color, typically used for titles or larger sections of text associated with destructive actions.*/
+  .text-destructive {
+    color: hsl(var(--destructive));
+  }
 
-    /* Border and ring colors */
-    .border-border {
-        border-color: hsl(var(--border));
-    }
-    .ring-ring {
-        box-shadow: 0 0 0 3px hsl(var(--ring));
-    }
+  /* Border and ring colors */
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+  .ring-ring {
+    box-shadow: 0 0 0 3px hsl(var(--ring));
+  }
 
-    /* Other utilities */
-    .bg-primary {
-        background-color: hsl(var(--primary));
-    }
-    .bg-secondary {
-        background-color: hsl(var(--secondary));
-    }
-    .bg-secondary-opacity{
-        background-color: hsl(var(--secondary-opacity));
-    }
-    .bg-muted {
-        background-color: hsl(var(--muted));
-    }
-    .bg-accent {
-        background-color: hsl(var(--accent));
-    }
-    .bg-destructive {
-        background-color: hsl(var(--destructive));
-    }
-    .bg-input {
-        background-color: hsl(var(--input));
-    }
-    .rounded-radius {
-        border-radius: var(--radius);
-    }
+  /* Other utilities */
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+  .bg-secondary {
+    background-color: hsl(var(--secondary));
+  }
+  .bg-secondary-opacity {
+    background-color: hsl(var(--secondary-opacity));
+  }
+  .bg-muted {
+    background-color: hsl(var(--muted));
+  }
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+  .bg-destructive {
+    background-color: hsl(var(--destructive));
+  }
+  .bg-input {
+    background-color: hsl(var(--input));
+  }
+  .rounded-radius {
+    border-radius: var(--radius);
+  }
 }
 
-
 @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  * {
+    @apply border-border;
   }
-    
+  body {
+    @apply bg-background text-foreground;
+  }
+}
