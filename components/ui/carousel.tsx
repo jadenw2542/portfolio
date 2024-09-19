@@ -1,3 +1,4 @@
+/*eslint no-use-before-define: 2*/
 'use client';
 
 import * as React from 'react';
