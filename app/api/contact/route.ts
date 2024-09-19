@@ -44,19 +44,21 @@ export async function POST(request: Request) {
     console.log('captcha success!');
 
     // Send email via Resend
-    console.log(
-      await resend.emails.send({
-        from: `${email}`,
-        to: 'jwong2542@gmail.com', // This can be your portfolio email
-        subject: `New message from ${name}`,
-        html: `<p><strong>Name:</strong> ${name}</p>
-             <p><strong>Email:</strong> ${email}</p>
-             <p><strong>Message:</strong> ${message}</p>`,
-      })
-    );
+    const emailResponse = await resend.emails.send({
+      from: `${email}`,
+      to: 'jadenw2542@gmail.com', // This can be your portfolio email
+      subject: `New message from ${name}`,
+      html: `<p><strong>Name:</strong> ${name}</p>
+           <p><strong>Email:</strong> ${email}</p>
+           <p><strong>Message:</strong> ${message}</p>`,
+    });
+
+    console.log(emailResponse);
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
+    console.error('Error:', error);
+
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: error.errors[0].message },
@@ -64,7 +66,10 @@ export async function POST(request: Request) {
       );
     }
     return NextResponse.json(
-      { error: 'Failed to send message' },
+      {
+        error:
+          'Failed to send message. Please verify your domain configuration with Resend.',
+      },
       { status: 500 }
     );
   }
