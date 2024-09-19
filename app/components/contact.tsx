@@ -3,7 +3,6 @@ export default function Contact() {
   return (
     <div className="flex items-center justify-center">
       {' '}
-      {/* Centering the whole section */}
       <div
         id="contact"
         className="text-background mx-auto w-6/12 scroll-mt-4 pb-16 lg-pc:scroll-mt-8 mobile:w-full mobile:scroll-mt-20 mobile:pb-10"
