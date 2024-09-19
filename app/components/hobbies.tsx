@@ -17,16 +17,16 @@ export default function Hobbies() {
         <div id="hobbies" className="text-background pb-16 scroll-mt-4
         lg-pc:scroll-mt-8 mobile:scroll-mt-20 mobile:pb-10">
             <h1 className="font-bold text-3xl pb-8 lg-pc:text-5xl">My Hobbies</h1>
-            <div>
+            <div  className='lg-pc:text-3xl'>
                 <p>
-                    When I'm not coding, I like to play videogames and hit the gym. My favorite day is chest day, but my favorite exercise is reverse curls!
+                    When I&apos;m not coding, I like to play videogames and hit the gym. My favorite day is chest day, but my favorite exercise is reverse curls!
                 </p>
                 <p>
                     Recently, I started my espresso journey and built a home cafe station! My favorite drinks are oat lattes and cold brews with vanilla sweet cold foam.
                     In my free time, I love experimenting with different coffee beans and tweaking various variables to craft different delicious coffee drinks for my family to enjoy.
                 </p>
 
-                <p className='font-bold text-2xl py-8 lg-pc:text-4xl'>My Coffee Equipment:</p>
+                <p className='font-bold text-2xl py-4 lg-pc:text-4xl'>My Coffee Equipment:</p>
 
                 <div className="grid grid-cols-4 mobile:grid-cols-2 gap-4">
                     <div className="grid gap-4">

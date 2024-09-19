@@ -87,14 +87,14 @@ export default function Projects() {
         lg-pc:m-12">
           <div className="flex flex-row justify-between items-center pb-2
           lg-pc:pb-3">
-            <div className="flex flex-row items-center w-full">
+            <div className="flex flex-row items-center w-full pr-8">
                 <Image
                     src={Geowizlogo}
                     alt="GeoWizard Logo"
                     className="w-10 h-10 lg-pc:w-20 lg-pc:h-20"
                     />
                 <h1 className="font-bold text-2xl pl-2
-                lg-pc:text-5xl">GeoWizard</h1>
+                lg-pc:text-5xl lg-pc:pl-6">GeoWizard</h1>
             </div>
 
             <a href="https://github.com/jadenw2542/GeoWizard" target="_blank" className='pr-4'> 
@@ -201,14 +201,14 @@ export default function Projects() {
         lg-pc:m-12">
           <div className="flex flex-row justify-between items-center pb-2
           lg-pc:pb-3">
-            <div className="flex flex-row items-center w-full">
+            <div className="flex flex-row items-center w-full pr-8">
                 <Image
                     src={DFGIcon}
                     alt="DFG Icon"
                     className="w-10 h-10 lg-pc:w-20 lg-pc:h-20"
                     />
                 <h1 className="font-bold text-2xl pl-2 mobile:pr-4
-                lg-pc:text-5xl">Human Rights First’s Litigation Tracker</h1>
+                lg-pc:text-5xl lg-pc:pl-6">Human Rights First’s Litigation Tracker</h1>
             </div>
 
             <a href="https://github.com/jadenw2542/GeoWizard" target="_blank" className='pr-4'> 
@@ -305,7 +305,7 @@ export default function Projects() {
         lg-pc:m-12">
           <div className="flex flex-row justify-between items-center pb-2
           lg-pc:pb-3">
-            <div className="flex flex-row items-center w-full">
+            <div className="flex flex-row items-center w-full pr-8">
                 <h1 className="font-bold text-2xl
                 lg-pc:text-5xl">Fake Stack Overflow</h1>
             </div>

@@ -33,13 +33,6 @@ export default function NavigationModal() {
               </li>
               <li>
                 <DialogClose asChild>
-                  <Link href="#resume" scroll={true} className="font-bold text-xs ">
-                    Resume
-                  </Link>
-                </DialogClose>
-              </li>
-              <li>
-                <DialogClose asChild>
                   <Link href="#experience" scroll={true} className="font-bold text-xs">
                     Experience
                   </Link>
