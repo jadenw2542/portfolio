@@ -12,6 +12,8 @@
   ],
   "plugins": ["tailwindcss"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "no-unused-vars": "off"
+
   }
 }
