@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import React from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -10,6 +11,9 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [recaptchaToken, setRecaptchaToken] = useState<string>('');
+
+  const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,10 +21,16 @@ export default function ContactForm() {
     setError('');
     setSuccess('');
 
+    if (!recaptchaToken) {
+      setError('Please complete the CAPTCHA.');
+      setLoading(false);
+      return;
+    }
+
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message }),
+      body: JSON.stringify({ name, email, message, recaptchaToken }),
     });
 
     const result = await res.json();
@@ -35,6 +45,12 @@ export default function ContactForm() {
     }
 
     setLoading(false);
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    if (token) {
+      setRecaptchaToken(token);
+    }
   };
 
   return (
@@ -66,6 +82,10 @@ export default function ContactForm() {
             required
             className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 lg-pc:h-40 lg-pc:rounded-2xl lg-pc:text-2xl"
           ></textarea>
+          <ReCAPTCHA
+            sitekey={RECAPTCHA_SITE_KEY}
+            onChange={handleRecaptchaChange}
+          />
           <button
             type="submit"
             disabled={loading}
