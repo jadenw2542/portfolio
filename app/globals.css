@@ -4,19 +4,19 @@
 
 @layer utilities {
   .bg-muted-opacity-80 {
-    background-color: hsl(var(--muted) / 0.8); 
+    background-color: hsl(var(--muted) / 0.8);
   }
-} 
+}
 
 .recaptcha-container {
-  width: 100%; 
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 @media (max-width: 640px) {
   .recaptcha-container {
-    transform: scale(0.85); 
+    transform: scale(0.85);
   }
 }
 

@@ -39,7 +39,8 @@ export default function About() {
         Department for the Aging, where I honed my skills in data analysis,
         network operations, and software development. Most recently, I served as
         a Software Engineer Intern at Develop For Good, contributing to the
-        development of a litigation tracking system for Human Rights First.
+        development of a litigation tracking system for Human Rights First, a
+        not-for-profit organization.
       </p>
       <br />
       <p>
