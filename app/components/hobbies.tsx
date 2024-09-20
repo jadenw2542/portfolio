@@ -18,28 +18,28 @@ const coffeeEquipment = [
     src: Breville,
     alt: 'Breville',
     title: 'Breville Infuser',
-    description: 'Espresso Machine',
+    description: 'Espresso machine: has preinfusion',
     link: 'https://www.amazon.com/Breville-BES840XL-Infuser-Espresso-Machine/dp/B0089SSOR6/ref=sr_1_1?crid=HNBDMY4GLJRX',
   },
   {
     src: Funnel,
     alt: 'Funnel',
     title: 'Normcore 58mm Magnetic Dosing Funnel V2',
-    description: 'Dosing Funnel',
+    description: 'Dosing funnel for grinder',
     link: 'https://www.amazon.com/Normcore-58mm-Magnetic-Dosing-Funnel/dp/B0BLW6SKHL/ref=sr_1_2?crid=2PJCJYZIAKYDO',
   },
   {
     src: Scale,
     alt: 'Scale',
     title: 'CHWARES Food Scale',
-    description: 'Scale',
+    description: 'Scale to measure coffee beans',
     link: 'https://www.amazon.com/CHWARES-Kitchen-Function-Digital-Dieting/dp/B0BWRY75H9',
   },
   {
     src: D54,
     alt: 'd54',
     title: 'D54',
-    description: 'Grinder',
+    description: 'Stepless Flat Burr Grinder',
     link: 'https://www.amazon.com/MiiCoffee-DF54-Single-Coffee-Grinder/dp/B0D1NMR67G',
   },
   {
@@ -60,14 +60,14 @@ const coffeeEquipment = [
     src: WDT,
     alt: 'WISSXOER WDT Tool',
     title: 'WISSXOER WDT Tool',
-    description: 'WDT Tool',
+    description: 'WDT Tool to evenly distribute coffee grounds',
     link: 'https://www.amazon.com/Espresso-Distribution-Stainless-Installed-Replacement/dp/B0BH8MRB2Z/ref=sr_1_6?crid=3G882IPZS6XLC&dib=eyJ2IjoiMSJ9.OHOquaT17mzFfUJtxtmu_0rEvxsygyU9czlrvafFXKS2yU9mX9zBVTzddZ2pK-EaWfps8Thd1mfz6UG3zaZtVI6q_odVxkU7AdUNywgeartTw4a4K4CedYuMgWNtg8vG8DKN8aJxxlwh8ywdfZoCU8FbNPu2Sigo6MS9JwKG1TfFl_EiP-3Lf0CtBq__58H3Ygg7_kw_yuWFGoIrUuIBaDfwD-HA4o0pVDgt8FIDr4n9nCAVBIl7l5oeXfqasvWVG3JJblgKpJdysWxS8AcjFa8hAizzsI99ixtl47EjHAY.c7GZd1TMDunFNaLm2rpYhpbw0M4YZiqD53Zx3jmrGI8&dib_tag=se&keywords=wdt%2Btool&qid=1726129170&sprefix=wdt%2Bto%2Caps%2C380&sr=8-6&th=1',
   },
   {
     src: Puck,
     alt: 'Normcore 58.5mm Puck Screen',
     title: 'Normcore 58.5mm Puck Screen',
-    description: 'Grinder',
+    description: 'Puck Screen for portafilter',
     link: 'https://www.amazon.com/Normcore-58-5mm-Espresso-Portafilter-Contact/dp/B09DDC7KMQ/ref=sr_1_3?crid=2JPML0XVIXK88&dib=eyJ2IjoiMSJ9.FMeNj50No2L0NfoHKGDrmAE7fY0lGZXHsMHu7qiHbiJtKU60XjsnG7cW8lsEydeiEw0Z4qRcWMjFG_jVCsOrRIEaqU6nbxFVFW0TP_rgZ-jCVEmR9Sr-DNdZI7O9t5AcWJPnaxPNE8_ctaY7YjL0PxXDyo2ms1H8pXbXDNKLc3jZmCjuIblW5GcwJOMDVGkyg2mPgiHeDjlJvTxsQ3Ph_SYda7Ae1G6UZvBLP94BsW1R1ENp5CJolJPbSjrj2QBuXn66XqlZ4zA1AQvxa_jo__l0coY13LkSh-0bZzQD8dg.4oc01wf9Krc_iVcBwQFxgl4mAuZ7Df4dN0MhWXW8Y6I&dib_tag=se&keywords=nomcore+puck+screen&qid=1726129707&sprefix=nomcore+p%2Caps%2C247&sr=8-3',
   },
   {
@@ -95,7 +95,7 @@ const coffeeEquipment = [
     src: Cloth,
     alt: 'Cloth',
     title: 'Amazon Basics Microfiber Cleaning Cloths',
-    description: 'Microfiber Cloth',
+    description: 'Microfiber cloth for clean up',
     link: 'https://www.amazon.com/AmazonBasics-CW190423-24-Pack-Microfiber-Cleaning/dp/B009FUF6DM',
   },
 ];
@@ -146,18 +146,20 @@ export default function Hobbies() {
                   key={item.title}
                   href={item.link}
                   target="_blank"
-                  className="ring-ring hover:bg-muted h-auto max-w-full rounded-lg bg-white object-cover object-center lg-pc:rounded-2xl"
+                  className="ring-ring group relative max-w-full rounded-lg bg-white object-cover object-center lg-pc:rounded-2xl"
                 >
-                  <div className="flex flex-col items-center p-4">
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      className="max-h-40 items-center object-contain lg-pc:max-h-80 mobile:max-h-20"
-                    />
-                    <div className="w-full pt-4 text-center text-xl font-bold">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    className="max-h-72 w-full rounded-lg object-contain p-4 py-4 lg-pc:max-h-96 lg-pc:rounded-2xl mobile:max-h-40"
+                  />
+
+                  {/* Overlay */}
+                  <div className="bg-muted-opacity-80 absolute inset-0 flex flex-col items-center justify-center rounded-lg p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg-pc:rounded-2xl">
+                    <div className="text-center text-2xl font-bold">
                       {item.title}
                     </div>
-                    <div className="w-full text-center">{item.description}</div>
+                    <div className="mt-2 text-center">{item.description}</div>
                   </div>
                 </a>
               ))}

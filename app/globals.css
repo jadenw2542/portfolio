@@ -2,15 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-muted-opacity-80 {
+    background-color: hsl(var(--muted) / 0.8); 
+  }
+} 
+
 .recaptcha-container {
-  width: 100%; /* Ensures the CAPTCHA scales with the parent container */
+  width: 100%; 
   display: flex;
-  justify-content: center; /* Centers the CAPTCHA */
+  justify-content: center;
 }
 
 @media (max-width: 640px) {
   .recaptcha-container {
-    transform: scale(0.85); /* Scales down the CAPTCHA on smaller screens */
+    transform: scale(0.85); 
   }
 }
 
