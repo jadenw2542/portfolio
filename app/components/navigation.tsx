@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import ModeToggle from '@/app/components/ui/dark-mode-toggle';
 import NavigationModal from '@/app/components/navigation-modal';
