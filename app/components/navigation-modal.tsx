@@ -33,65 +33,67 @@ export default function NavigationModal() {
         <DialogHeader>
           <DialogTitle></DialogTitle>
           <DialogDescription>
-            <ul className="flex w-full flex-col justify-between">
-              <li>
+            <ul className="flex size-full flex-col justify-center">
+              <li className="py-1">
                 <DialogClose asChild>
                   <Link
                     href="#about"
                     scroll={true}
-                    className="text-xs font-bold"
+                    className="text-popover-foreground text-2xl font-bold"
                   >
                     About Me
                   </Link>
                 </DialogClose>
               </li>
-              <li>
+              <li className="py-1">
                 <DialogClose asChild>
                   <Link
                     href="#experience"
                     scroll={true}
-                    className="text-xs font-bold"
+                    className="text-popover-foreground text-2xl font-bold"
                   >
                     Experience
                   </Link>
                 </DialogClose>
               </li>
-              <li>
+              <li className="py-1">
                 <DialogClose asChild>
                   <Link
                     href="#projects"
                     scroll={true}
-                    className="text-xs font-bold"
+                    className="text-popover-foreground text-2xl font-bold"
                   >
                     Projects
                   </Link>
                 </DialogClose>
               </li>
-              <li>
+              <li className="py-1">
                 <DialogClose asChild>
                   <Link
                     href="#hobbies"
                     scroll={true}
-                    className="text-xs font-bold"
+                    className="text-popover-foreground text-2xl font-bold"
                   >
                     Hobbies
                   </Link>
                 </DialogClose>
               </li>
-              <li>
+              <li className="py-1">
                 <DialogClose asChild>
                   <Link
                     href="#contact"
                     scroll={true}
-                    className="text-xs font-bold"
+                    className="text-popover-foreground text-2xl font-bold"
                   >
                     Contact Me
                   </Link>
                 </DialogClose>
               </li>
-              <li>
+              <li className="py-1">
                 <DialogClose asChild>
-                  <button className="text-xs font-bold">Close</button>
+                  <button className="text-destructive text-2xl font-bold">
+                    Close
+                  </button>
                 </DialogClose>
               </li>
             </ul>

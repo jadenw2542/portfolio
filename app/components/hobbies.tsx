@@ -156,10 +156,12 @@ export default function Hobbies() {
 
                   {/* Overlay */}
                   <div className="bg-muted-opacity-80 absolute inset-0 flex flex-col items-center justify-center rounded-lg p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg-pc:rounded-2xl">
-                    <div className="text-center text-2xl font-bold">
+                    <div className="text-center text-2xl font-bold mobile:text-base">
                       {item.title}
                     </div>
-                    <div className="mt-2 text-center">{item.description}</div>
+                    <div className="mt-2 text-center mobile:text-sm">
+                      {item.description}
+                    </div>
                   </div>
                 </a>
               ))}
