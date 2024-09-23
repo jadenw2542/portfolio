@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex">
       <Navigation />
 
-      <div className="ml-56 w-full px-8 pt-8 lg-pc:ml-120 lg-pc:pt-16 mobile:m-0 mobile:p-3 mobile:pt-24">
+      <div className="ml-56 w-full px-8 pt-8 lg-pc:ml-120 lg-pc:pt-8 mobile:m-0 mobile:p-3 mobile:pt-24">
         <About />
         {/* //<Resume/> */}
         <Experience />

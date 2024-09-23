@@ -211,7 +211,7 @@ export default function Projects() {
             />
           </span>
         </div>
-        <div className="m-6 flex h-full w-6/12 flex-col lg-pc:m-12 mobile:m-0 mobile:w-full">
+        <div className="m-6 flex h-full w-6/12 flex-col mobile:m-0 mobile:w-full">
           <Carousel className="h-full w-full">
             <CarouselContent>
               {geowizard.map((src, index) => (

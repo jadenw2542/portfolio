@@ -119,7 +119,7 @@ export default function Hobbies() {
       id="hobbies"
       className="text-background scroll-mt-4 pb-16 lg-pc:scroll-mt-8 mobile:scroll-mt-20 mobile:pb-10"
     >
-      <h1 className="pb-8 text-3xl font-bold lg-pc:text-5xl">My Hobbies</h1>
+      <h1 className="pb-4 text-3xl font-bold lg-pc:text-5xl">My Hobbies</h1>
       <div className="lg-pc:text-3xl">
         <p>
           When I&apos;m not coding, I like to play videogames and hit the gym.

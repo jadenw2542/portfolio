@@ -5,7 +5,7 @@ export default function Contact() {
       {' '}
       <div
         id="contact"
-        className="text-background mx-auto w-6/12 scroll-mt-4 pb-16 lg-pc:scroll-mt-8 mobile:w-full mobile:scroll-mt-20 mobile:pb-10"
+        className="text-background mx-auto w-6/12 scroll-mt-4 pb-16 lg-pc:w-8/12 lg-pc:scroll-mt-8 mobile:w-full mobile:scroll-mt-20 mobile:pb-10"
       >
         <div className="bg-secondary-opacity flex w-full flex-col items-center justify-center rounded-lg p-10 text-center shadow-md">
           <h1 className="text-3xl font-bold leading-none tracking-tight lg-pc:text-5xl">

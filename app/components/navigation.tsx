@@ -7,7 +7,7 @@ import GithubIcon from '@/public/svg/github-mark.svg';
 
 export default function Navigation() {
   return (
-    <nav className="bg-secondary fixed left-0 top-0 z-50 flex h-full w-56 flex-col px-5 pt-8 lg-pc:w-120 lg-pc:pt-16 mobile:h-20 mobile:w-full mobile:flex-row mobile:justify-between mobile:p-4">
+    <nav className="bg-secondary fixed left-0 top-0 z-50 flex h-full w-56 flex-col px-5 pt-8 lg-pc:w-120 lg-pc:pt-8 mobile:h-20 mobile:w-full mobile:flex-row mobile:justify-between mobile:p-4">
       <div className="flex w-full flex-row justify-between pc:hidden">
         <div className="flex flex-row pc:hidden">
           <Image
@@ -52,11 +52,11 @@ export default function Navigation() {
               width={200} // default width for non-responsive screens
               height={200} // default height for non-responsive screens
               alt="Picture of the author"
-              className="my-3 rounded-full lg-pc:h-108 lg-pc:w-108"
+              className="my-3 rounded-full lg-pc:h-80 lg-pc:w-80"
               priority
             />
           </div>
-          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-4 lg-pc:pl-8">
+          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-2 lg-pc:pl-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -80,7 +80,7 @@ export default function Navigation() {
             </Link>
           </li>
           {/* <li className="flex flex-row items-center py-1 pl-1 my-2 rounded-md hover:bg-accent hover:text-accent-foreground 
-            lg-pc:py-4 lg-pc:pl-8 ">
+            lg-pc:py-2 lg-pc:pl-8 ">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 lg-pc:size-12">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
               </svg>
@@ -89,7 +89,7 @@ export default function Navigation() {
                 Resume
               </Link>
             </li> */}
-          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-4 lg-pc:pl-8">
+          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-2 lg-pc:pl-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -112,7 +112,7 @@ export default function Navigation() {
               Experience
             </Link>
           </li>
-          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-4 lg-pc:pl-8">
+          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-2 lg-pc:pl-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -135,7 +135,7 @@ export default function Navigation() {
               Projects
             </Link>
           </li>
-          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-4 lg-pc:pl-8">
+          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-2 lg-pc:pl-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -158,7 +158,7 @@ export default function Navigation() {
               Hobbies
             </Link>
           </li>
-          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-4 lg-pc:pl-8">
+          <li className="hover:bg-accent hover:text-accent-foreground my-2 flex flex-row items-center rounded-md py-1 pl-1 lg-pc:py-2 lg-pc:pl-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -195,14 +195,14 @@ export default function Navigation() {
                 alt="Github Link"
                 width={35}
                 height={35}
-                className="lg-pc:h-20 lg-pc:w-20"
+                className="lg-pc:h-16 lg-pc:w-16"
               />
             </a>
 
             <a href="https://www.linkedin.com/in/jaden-wong/" target="_blank">
               <svg
                 pointerEvents={undefined}
-                className="lg-pc:h-28 lg-pc:w-28 lg-pc:pl-10"
+                className="lg-pc:size-24 lg-pc:pl-10"
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"
                 height="2em"
