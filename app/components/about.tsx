@@ -4,7 +4,7 @@ export default function About() {
       id="about"
       className="text-foreground scroll-mt-4 pb-16 text-lg lg-pc:scroll-mt-8 lg-pc:text-3xl mobile:scroll-mt-20 mobile:pb-10"
     >
-      <h1 className="pb-5 text-6xl lg-pc:text-8xl mobile:text-3xl">
+      <h1 className="pb-5 text-6xl lg-pc:text-7xl mobile:text-3xl">
         Hello 👋
         <br />
         My name is Jaden Wong - software engineer based in NYC
