@@ -1,5 +1,8 @@
+'use client';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
+import { useInView, animated, useTrail, config } from '@react-spring/web';
+import { useEffect, useState } from 'react';
 import Breville from '@/public/imgs/coffee/breville.jpg';
 import D54 from '@/public/imgs/coffee/d54.jpg';
 import WDT from '@/public/imgs/coffee/wdt.jpg'; // WISSXOER WDT Tool tool https://www.amazon.com/Espresso-Distribution-Stainless-Installed-Replacement/dp/B0BH8MRB2Z/ref=sr_1_6?crid=3G882IPZS6XLC&dib=eyJ2IjoiMSJ9.OHOquaT17mzFfUJtxtmu_0rEvxsygyU9czlrvafFXKS2yU9mX9zBVTzddZ2pK-EaWfps8Thd1mfz6UG3zaZtVI6q_odVxkU7AdUNywgeartTw4a4K4CedYuMgWNtg8vG8DKN8aJxxlwh8ywdfZoCU8FbNPu2Sigo6MS9JwKG1TfFl_EiP-3Lf0CtBq__58H3Ygg7_kw_yuWFGoIrUuIBaDfwD-HA4o0pVDgt8FIDr4n9nCAVBIl7l5oeXfqasvWVG3JJblgKpJdysWxS8AcjFa8hAizzsI99ixtl47EjHAY.c7GZd1TMDunFNaLm2rpYhpbw0M4YZiqD53Zx3jmrGI8&dib_tag=se&keywords=wdt%2Btool&qid=1726129170&sprefix=wdt%2Bto%2Caps%2C380&sr=8-6&th=1
@@ -13,7 +16,7 @@ import Frother from '@/public/imgs/coffee/frother.jpg'; //MF02 Rechargeable Milk
 import Clean from '@/public/imgs/coffee/clean.jpg';
 import Cloth from '@/public/imgs/coffee/cloth.jpg';
 
-const coffeeEquipment = [
+const coffeeEquipmentList = [
   {
     src: Breville,
     alt: 'Breville',
@@ -109,11 +112,21 @@ type CoffeeEquipment = {
 };
 
 const chunkedCoffeeEquipment: Array<Array<CoffeeEquipment>> = [];
-for (let i = 0; i < coffeeEquipment.length; i += 3) {
-  chunkedCoffeeEquipment.push(coffeeEquipment.slice(i, i + 3));
+for (let i = 0; i < coffeeEquipmentList.length; i += 3) {
+  chunkedCoffeeEquipment.push(coffeeEquipmentList.slice(i, i + 3));
 }
 
 export default function Hobbies() {
+  const [ref, inView] = useInView({
+    rootMargin: '-100px 0px',
+  });
+
+  const trail = useTrail(chunkedCoffeeEquipment.length, {
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0px)' : 'translateY(40px)',
+    config: config.gentle,
+  });
+
   return (
     <div
       id="hobbies"
@@ -133,19 +146,18 @@ export default function Hobbies() {
           beans and tweaking various variables to craft different delicious
           coffee drinks for my family to enjoy.
         </p>
-
         <p className="py-4 text-2xl font-bold lg-pc:text-4xl">
           My Coffee Equipment:
         </p>
-
-        <div className="grid grid-cols-4 gap-4 mobile:grid-cols-2">
-          {chunkedCoffeeEquipment.map((chunk, index) => (
-            <div key={index} className="grid gap-4">
-              {chunk.map((item, itemIndex) => (
+        <div ref={ref} className="grid grid-cols-4 gap-4 mobile:grid-cols-2">
+          {trail.map((style, index) => (
+            <animated.div key={index} style={style} className="grid gap-4">
+              {chunkedCoffeeEquipment[index]?.map((item) => (
                 <a
                   key={item.title}
                   href={item.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="ring-ring group relative max-w-full rounded-lg bg-white object-cover object-center lg-pc:rounded-2xl"
                 >
                   <Image
@@ -153,9 +165,8 @@ export default function Hobbies() {
                     alt={item.alt}
                     className="max-h-72 w-full rounded-lg object-contain p-4 py-4 lg-pc:max-h-96 lg-pc:rounded-2xl mobile:max-h-40"
                   />
-
                   {/* Overlay */}
-                  <div className="bg-muted-opacity-80 absolute inset-0 flex flex-col items-center justify-center rounded-lg p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg-pc:rounded-2xl">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg bg-gray-800 bg-opacity-80 p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg-pc:rounded-2xl">
                     <div className="text-center text-2xl font-bold mobile:text-base">
                       {item.title}
                     </div>
@@ -165,7 +176,7 @@ export default function Hobbies() {
                   </div>
                 </a>
               ))}
-            </div>
+            </animated.div>
           ))}
         </div>
       </div>
