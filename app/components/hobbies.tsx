@@ -166,7 +166,7 @@ export default function Hobbies() {
                     className="max-h-72 w-full rounded-lg object-contain p-4 py-4 lg-pc:max-h-96 lg-pc:rounded-2xl mobile:max-h-40"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg bg-muted-opacity-80 p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg-pc:rounded-2xl">
+                  <div className="bg-muted-opacity-80 absolute inset-0 flex flex-col items-center justify-center rounded-lg p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg-pc:rounded-2xl">
                     <div className="text-center text-2xl font-bold mobile:text-base">
                       {item.title}
                     </div>
